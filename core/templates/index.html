@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <ul>
+        {% for carro in carros %}
+            <li> {{ carro.id }} - {{ carro.placa }} - {{ carro.modelo }} - {{ carro.marca }} - {{ carro.cor }}
+            <a href = "{% url 'alterar' carro.id %}">Alterar</a>
+            <a href = "{% url 'deletar' carro.id %}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form action = "{% url 'salvar' %}" method="POST">
+        <!-- serve para proteger de ataques ao form -->
+        {% csrf_token %}
+
+        Placa - <input type = "text" name = "placa"><br><br>
+        Modelo - <input type = "text" name = "modelo"><br><br>
+        Marca - <input type = "text" name = "marca"><br><br>
+        Cor - <input type = "text" name = "cor">
+
+        <button type = "submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar</title>
+</head>
+<body>
+    {{ carro.id }} - {{ carro.placa }} - {{ carro.modelo }} - {{ carro.marca }} - {{ carro.cor }}
+
+    <form action = "{% url 'atualizar' carro.id %}" method="POST">
+        <!-- serve para proteger de ataques ao form -->
+        {% csrf_token %}
+
+        Placa - <input type = "text" name = "placa" value = "{{carro.placa}}"><br><br>
+        Modelo - <input type = "text" name = "modelo" value = "{{carro.modelo}}"><br><br>
+        Marca - <input type = "text" name = "marca" value = "{{carro.marca}}"><br><br>
+        Cor - <input type = "text" name = "cor" value= "{{carro.cor}}">
+
+        <button type = "submit">Atualizar</button>
+</form>
+</body>
+</html>
