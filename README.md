@@ -4,9 +4,9 @@ Este projeto é um sistema de gerenciamento de carros, fornecendo operações b�
 
 #### Tecnologias utilizadas:
 
-- Linguagens: HTML e Python
-- Banco de Dados: MySQL
-- Frameworks: Django
+- Linguagens: HTML e Python;
+- Frameworks: Django;
+- Banco de Dados: MySQL.
 
 #### Principais funcionalidades:
 
