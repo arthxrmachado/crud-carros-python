@@ -6,7 +6,7 @@ Este projeto é um sistema de gerenciamento de carros, fornecendo operações b�
 
 - Linguagens: HTML e Python;
 - Frameworks: Django;
-- Banco de Dados: MySQL.
+- Banco de Dados: SQLite.
 
 #### Principais funcionalidades:
 
